@@ -14,6 +14,11 @@ libraryDependencies ++= Seq(
   //config related dependencies
   "com.typesafe" % "config" % "1.3.1",
   //Test related dependencies
-  "org.scalatest" %% "scalatest" % "3.0.0" % Test
+  "org.scalatest" %% "scalatest" % "3.0.0" % Test,
+  "com.holdenkarau" %% "spark-testing-base" % "2.2.0_0.9.0" % Test
 )
-        
+
+
+parallelExecution in Test := false
+fork in Test := true
+javaOptions ++= Seq("-Xms512M", "-Xmx2048M", "-XX:MaxPermSize=2048M", "-XX:+CMSClassUnloadingEnabled")

@@ -10,9 +10,9 @@ object AppEnv{
 
   import com.foobar.config.AppConfig._
 
-  @transient val spark = SparkSession.builder()
+  @transient val sparkSession = SparkSession.builder()
     .appName(appName)
     .master("local[*]")
     .getOrCreate()
-  spark.sparkContext.setCheckpointDir(checkPointDirectory)
+  sparkSession.sparkContext.setCheckpointDir(checkPointDirectory)
 }

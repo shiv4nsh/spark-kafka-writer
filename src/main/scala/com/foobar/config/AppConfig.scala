@@ -13,5 +13,5 @@ object AppConfig {
   val fileToBeRead = config.getString("fileToBeRead")
   val checkPointDirectory = config.getString("checkpointDir")
   val tempFilePath = config.getString("tempFilePath")
-  val kafka = new KafkaConfig(config.getConfig("kafka"))
+  val kafkaConf = new KafkaConfig(config.getConfig("kafka"))
 }

@@ -2,3 +2,4 @@
 target/
 spark-warehouse/
 project/target/
+src/test/resources/temp/
