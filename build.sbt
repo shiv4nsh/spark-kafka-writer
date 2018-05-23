@@ -9,7 +9,7 @@ libraryDependencies ++= Seq(
   //Spark related dependencies
   "org.apache.spark" %% "spark-core" % sparkVersion,
   "org.apache.spark" %% "spark-sql" % sparkVersion,
-  "org.apache.spark" %% "spark-streaming-kafka-0-10" % sparkVersion,
+  "org.apache.spark" %% "spark-sql-kafka-0-10" % sparkVersion,
   "org.apache.kafka" % "kafka-clients" % "0.10.2.0",
   //config related dependencies
   "com.typesafe" % "config" % "1.3.1",
