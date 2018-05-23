@@ -13,7 +13,7 @@ import scala.util.Try
 class SparkUtil(sparkSession: SparkSession) {
 
   def isMidFilePresent(path: String = AppConfig.tempFilePath): Option[DataFrame] = {
-    Try(sparkSession.read.csv(path).toDF()).toOption
+    Try(sparkSession.read.csv(path).toDF("key","value")).toOption
   }
 
   def readTextFile(path: String, writePath: String = AppConfig.tempFilePath) = {
